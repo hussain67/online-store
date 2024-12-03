@@ -6,6 +6,7 @@ const router = createBrowserRouter([
 	{
 		path: "/",
 		element: <HomeLayout />,
+		errorElement: <Error />,
 		children: [
 			{
 				index: true,
@@ -30,16 +31,22 @@ const router = createBrowserRouter([
 			{
 				path: "orders",
 				element: <Orders />
+			},
+			{
+				path: "*",
+				element: <Error />
 			}
 		]
 	},
 	{
 		path: "/login",
-		element: <Login />
+		element: <Login />,
+		errorElement: <Error />
 	},
 	{
 		path: "/register",
-		element: <Register />
+		element: <Register />,
+		errorElement: <Error />
 	}
 ]);
 export default function App() {
