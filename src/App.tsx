@@ -1,6 +1,7 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { HomeLayout, Landing, Error, Products, SingleProduct, Cart, About, Register, Login, Checkout, Orders } from "./pages";
-
+import ErrorElement from "./components/ErrorElement";
+import { loader as landingLoader } from "./pages/Landing";
 // App Function
 const router = createBrowserRouter([
 	{
@@ -10,31 +11,38 @@ const router = createBrowserRouter([
 		children: [
 			{
 				index: true,
-				element: <Landing />
+				element: <Landing />,
+				loader: landingLoader
 			},
 			{
 				path: "about",
-				element: <About />
+				element: <About />,
+				errorElement: <ErrorElement />
 			},
 			{
 				path: "products",
-				element: <About />
+				element: <Products />,
+				errorElement: <ErrorElement />
+			},
+			{
+				path: "products/:id",
+				element: <SingleProduct />,
+				errorElement: <ErrorElement />
 			},
 			{
 				path: "cart",
-				element: <Cart />
+				element: <Cart />,
+				errorElement: <ErrorElement />
 			},
 			{
 				path: "checkout",
-				element: <Checkout />
+				element: <Checkout />,
+				errorElement: <ErrorElement />
 			},
 			{
 				path: "orders",
-				element: <Orders />
-			},
-			{
-				path: "*",
-				element: <Error />
+				element: <Orders />,
+				errorElement: <ErrorElement />
 			}
 		]
 	},

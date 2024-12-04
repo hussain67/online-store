@@ -9,15 +9,21 @@ function Header() {
 		navigate("/");
 	}
 	return (
-		<div className="align-element bg-slate-300 ">
+		<div className="align-element  ">
 			{user && (
-				<div className="flex justify-center items-center sm:justify-end  gap-3 h-20">
+				<div className="flex justify-center items-center sm:justify-end  gap-3 py-2">
 					<p>Hello {user}</p>
-					<Button onClick={handleLogout}>Logout</Button>
+					<Button
+						variant="link"
+						size="sm"
+						onClick={handleLogout}
+					>
+						Logout
+					</Button>
 				</div>
 			)}
 			{!user && (
-				<div className="flex items-center justify-center sm:justify-end bg-slate-300 gap-3 h-20">
+				<div className="flex items-center justify-center sm:justify-end  gap-3 h-20">
 					{" "}
 					<Link to="/login">Sign In </Link>
 					<Link to="/register"> Register</Link>

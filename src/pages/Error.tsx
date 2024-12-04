@@ -9,10 +9,15 @@ export default function Error() {
 		return (
 			<main className="min-h-[100vh] grid  place-content-center ">
 				<div className="text-center">
-					<h1>404</h1>
+					<h1 className="text-7xl text-primary mb-3">404</h1>
 					<h3>Page Not Found</h3>
-					<p>Sorry we could not found the page you are looking for</p>
-					<Button>Go Back Home</Button>
+					<p className="mt-2 mb-4">Sorry we could not found the page you are looking for</p>
+					<Button
+						size="lg"
+						variant="secondary"
+					>
+						<Link to="/">Go Back Home</Link>
+					</Button>
 				</div>
 			</main>
 		);

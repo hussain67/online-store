@@ -7,7 +7,7 @@ import NavLinks from "./NavLinks";
 function Navbar() {
 	return (
 		<nav>
-			<div className="align-element flex justify-between items-center mt-4 bg-slate-100 py-3">
+			<div className="bg-muted align-element flex justify-between items-center mt-2  py-3">
 				<Logo />
 				<LinksDropdown />
 				<NavLinks />
