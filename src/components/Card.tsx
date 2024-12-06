@@ -2,7 +2,7 @@ import { Product } from "../types/productTypes";
 import { formatAsPound } from "../utils/formatAsPound";
 
 function Card({ product }: { product: Product }) {
-	console.log(product);
+	// console.log(product);
 	const { image, title, price } = product.attributes;
 	const poundAmount = formatAsPound(price);
 	return (

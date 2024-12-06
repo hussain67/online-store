@@ -1,4 +1,4 @@
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "../ui/carousel";
 
 import hero1 from "../../assets/hero1.webp";
 import hero2 from "../../assets/hero2.webp";
@@ -10,7 +10,7 @@ const carousalImages = [hero1, hero2, hero3, hero4];
 
 function HeroCarousal() {
 	return (
-		<section className="hidden lg:block">
+		<section className="hidden lg:block p-4">
 			<Carousel>
 				<CarouselContent>
 					{carousalImages.map((image, index) => {
