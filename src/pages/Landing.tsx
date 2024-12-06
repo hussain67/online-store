@@ -1,4 +1,4 @@
-import { useLoaderData, type LoaderFunction } from "react-router-dom";
+import { type LoaderFunction } from "react-router-dom";
 import FeaturedProducts from "../components/FeaturedProducts";
 import Hero from "../components/hero/Hero";
 import { ProductResponse } from "../types/productTypes";
@@ -11,8 +11,8 @@ export const loader: LoaderFunction = async (): Promise<ProductResponse> => {
 	return { ...response.data };
 };
 function Landing() {
-	const result = useLoaderData();
-	console.log(result);
+	// const result = useLoaderData();
+	// console.log(result);
 	return (
 		<div>
 			<Hero />

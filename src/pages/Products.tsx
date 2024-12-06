@@ -11,11 +11,7 @@ export const loader: LoaderFunction = async (): Promise<ProductResponse> => {
 };
 
 function Products() {
-	return (
-		<div>
-			<ProductsContainer />
-		</div>
-	);
+	return <ProductsContainer />;
 }
 
 export default Products;

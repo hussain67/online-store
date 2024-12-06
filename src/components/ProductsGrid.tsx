@@ -8,11 +8,11 @@ function ProductsGrid() {
 	return (
 		<section className="mt-5 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
 			{products.map((product: Product) => (
-				<Link to={`/products/${product.id}`}>
-					<Card
-						key={product.id}
-						product={product}
-					/>
+				<Link
+					to={`/products/${product.id}`}
+					key={product.id}
+				>
+					<Card product={product} />
 				</Link>
 			))}
 		</section>
