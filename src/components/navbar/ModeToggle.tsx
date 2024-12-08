@@ -1,8 +1,8 @@
 import { Sun, Moon } from "lucide-react";
-import { useAppDispatch } from "../hook";
-import { Button } from "./ui/button";
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "./ui/dropdown-menu.tsx";
-import { setTheme } from "../features/theme/themeSlice";
+import { useAppDispatch } from "../../hook";
+import { Button } from "../ui/button";
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "../ui/dropdown-menu.tsx";
+import { setTheme } from "../../features/theme/themeSlice";
 function ModeToggle() {
 	const dispatch = useAppDispatch();
 	return (

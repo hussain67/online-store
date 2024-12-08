@@ -1,6 +1,7 @@
 import { Outlet, useNavigation } from "react-router-dom";
 import Header from "../components/Header";
-import Navbar from "../components/Navbar";
+// import Navbar from "../components/Navbar";
+import Navbar from "../components/navbar/Navbar";
 import Loading from "../components/Loading";
 
 export default function HomeLayout() {

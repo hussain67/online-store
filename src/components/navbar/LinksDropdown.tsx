@@ -1,9 +1,9 @@
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "../ui/dropdown-menu";
 import { AlignLeft } from "lucide-react";
-import { Button } from "./ui/button";
+import { Button } from "../ui/button";
 
 import { NavLink } from "react-router-dom";
-import { links } from "../utils/Links";
+import { links } from "../../utils/Links";
 // import { Links } from "../utils/Links";
 
 function LinksDropdown() {

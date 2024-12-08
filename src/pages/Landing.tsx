@@ -1,5 +1,5 @@
 import { type LoaderFunction } from "react-router-dom";
-import FeaturedProducts from "../components/FeaturedProducts";
+import FeaturedProducts from "../components/featured-products/FeaturedProducts";
 import Hero from "../components/hero/Hero";
 import { ProductResponse } from "../types/productTypes";
 import { customFetch } from "../utils/customFetch";

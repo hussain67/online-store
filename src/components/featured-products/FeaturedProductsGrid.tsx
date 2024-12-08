@@ -1,6 +1,6 @@
 import { Link, useLoaderData } from "react-router-dom";
-import { Product, ProductResponse } from "../types/productTypes";
-import Card from "./Card";
+import { Product, ProductResponse } from "../../types/productTypes";
+import Card from "../Card";
 
 function ProductsGrid() {
 	const { data: products } = useLoaderData() as ProductResponse;
