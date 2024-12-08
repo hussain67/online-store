@@ -20,7 +20,10 @@ export type Product = {
 		colors: string[];
 	};
 };
-
+export type SingleProductResponse = {
+	data: Product;
+	meta: {};
+};
 export type ProductsMeta = {
 	categories: string[];
 	companies: string[];
