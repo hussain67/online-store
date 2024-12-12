@@ -10,7 +10,13 @@ type FormInputProps = {
 function FormInput({ label, name, type, defaultValue }: FormInputProps) {
 	return (
 		<div>
-			<Label htmlFor={name}> {label || name}</Label>
+			<Label
+				htmlFor={name}
+				className="capitalize my-3 block"
+			>
+				{" "}
+				{label || name}
+			</Label>
 			<Input
 				id={name}
 				name={name}

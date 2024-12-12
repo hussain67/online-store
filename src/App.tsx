@@ -4,6 +4,8 @@ import ErrorElement from "./components/ErrorElement";
 import { loader as landingLoader } from "./pages/Landing";
 import { loader as productsLoader } from "./pages/Products";
 import { loader as singleProductLoader } from "./pages/SingleProduct";
+// Actions
+import { action as registerUserAction } from "./features/user/RegisterUser";
 // App Function
 const router = createBrowserRouter([
 	{
@@ -58,7 +60,8 @@ const router = createBrowserRouter([
 	{
 		path: "/register",
 		element: <Register />,
-		errorElement: <Error />
+		errorElement: <Error />,
+		action: registerUserAction
 	}
 ]);
 export default function App() {

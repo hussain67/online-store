@@ -1,3 +1,9 @@
+import RegisterUser from "../features/user/RegisterUser";
+
 export default function Register() {
-	return <div>REGISTER</div>;
+	return (
+		<div>
+			<RegisterUser />
+		</div>
+	);
 }
