@@ -1,22 +1,27 @@
 import { createSlice, payloadAction } from "@reduxjs/toolkit";
 import { toast } from "../../hooks/use-toast";
 
-type User = {
-	name: string;
+export type User = {
+	userName: string;
 	jwt: string;
 };
 type UserState = {
 	user: User | null;
 };
 
-function getUserFromLocalStorage(): UserState {
+function getUserFromLocalStorage(): User | null {
 	const user = localStorage.getItem("user");
-	return user ? JSON.parse(user) : null;
+	if (!user) return null;
+	return JSON.parse(user);
 }
+// This initial state will become state of the store
+const initialState: UserState = {
+	user: getUserFromLocalStorage()
+};
 
 const userSlice = createSlice({
 	name: "user",
-	initialState: getUserFromLocalStorage(),
+	initialState,
 	reducers: {
 		loginUser: (state, action: payloadAction<User>) => {
 			const user = action.payload;
@@ -34,4 +39,5 @@ const userSlice = createSlice({
 		}
 	}
 });
+export const { loginUser, logoutUser } = userSlice.actions;
 export default userSlice.reducer;

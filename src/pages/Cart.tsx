@@ -6,7 +6,7 @@ import CartTotal from "../features/cart/CartTotal";
 import { useAppSelector } from "../hook";
 
 function Cart() {
-	const user = "shahid";
+	const user = useAppSelector(state => state.userState.user);
 	const numCartItems = useAppSelector(state => state.cartState.numItemsInCart);
 	if (!numCartItems) {
 		return <SectionTitle text="Empty Cart" />;

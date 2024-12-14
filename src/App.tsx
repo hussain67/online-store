@@ -6,6 +6,7 @@ import { loader as productsLoader } from "./pages/Products";
 import { loader as singleProductLoader } from "./pages/SingleProduct";
 // Actions
 import { action as registerUserAction } from "./features/user/RegisterUser";
+import { action as loginAction } from "./features/user/LoginUser";
 // App Function
 const router = createBrowserRouter([
 	{
@@ -55,7 +56,8 @@ const router = createBrowserRouter([
 	{
 		path: "/login",
 		element: <Login />,
-		errorElement: <Error />
+		errorElement: <Error />,
+		action: loginAction
 	},
 	{
 		path: "/register",

@@ -4,9 +4,11 @@ import { Button } from "../ui/button";
 
 import { NavLink } from "react-router-dom";
 import { links } from "../../utils/Links";
+import { useAppDispatch, useAppSelector } from "../../hook";
 // import { Links } from "../utils/Links";
 
 function LinksDropdown() {
+	const user = useAppSelector(state => state.userState.user);
 	return (
 		<DropdownMenu>
 			<DropdownMenuTrigger
@@ -26,18 +28,23 @@ function LinksDropdown() {
 				align="start"
 				sideOffset={25}
 			>
-				{links.map(link => (
-					<DropdownMenuItem key={link.label}>
-						<NavLink
-							to={link.href}
-							className={({ isActive }) => {
-								return `capitalize w-full ${isActive ? "text-primary" : ""}`;
-							}}
-						>
-							{link.label}
-						</NavLink>
-					</DropdownMenuItem>
-				))}
+				{links.map(link => {
+					const restrictedRoute = link.href === "checkout" || link.href === "orders";
+					if (restrictedRoute && !user) return;
+
+					return (
+						<DropdownMenuItem key={link.label}>
+							<NavLink
+								to={link.href}
+								className={({ isActive }) => {
+									return `capitalize w-full ${isActive ? "text-primary" : ""}`;
+								}}
+							>
+								{link.label}
+							</NavLink>
+						</DropdownMenuItem>
+					);
+				})}
 			</DropdownMenuContent>
 		</DropdownMenu>
 	);

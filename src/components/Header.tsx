@@ -1,18 +1,28 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Button } from "./ui/button";
+import { useAppDispatch, useAppSelector } from "../hook";
+import { logoutUser } from "../features/user/userSlice";
+import { clearCart } from "../features/cart/cartSlice";
+
+// Header Component
+
 function Header() {
 	const navigate = useNavigate();
-	const [user, setUser] = useState<string | null>("Shahid");
+	const user = useAppSelector(state => state.userState.user);
+	const dispatch = useAppDispatch();
+	// const [user, setUser] = useState<string | null>(userName);
 	function handleLogout() {
-		setUser(null);
+		// setUser(null);
+		dispatch(logoutUser());
+		dispatch(clearCart());
 		navigate("/");
 	}
 	return (
 		<div className="align-element  ">
 			{user && (
 				<div className="flex justify-center items-center sm:justify-end  gap-3 py-2">
-					<p>Hello {user}</p>
+					<p>Hello {user.userName}</p>
 					<Button
 						variant="link"
 						size="sm"
