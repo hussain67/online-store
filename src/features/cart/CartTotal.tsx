@@ -5,7 +5,7 @@ import CartRow from "./CartRow";
 function CartTotal() {
 	const { cartTotal, shipping, tax, orderTotal } = useAppSelector(state => state.cartState);
 	return (
-		<div className="bg-muted px-4 divide-y-2">
+		<div className="bg-muted px-4 divide-y-2 min-w-56">
 			<CartRow>
 				<>
 					<span>Subtotal</span> <span>{formatAsPound(cartTotal)}</span>
@@ -23,7 +23,7 @@ function CartTotal() {
 			</CartRow>
 			<CartRow>
 				<>
-					<span>Order Total</span> <span>{formatAsPound(orderTotal)}</span>
+					<span>Order Total </span> <span>{formatAsPound(orderTotal)}</span>
 				</>
 			</CartRow>
 		</div>

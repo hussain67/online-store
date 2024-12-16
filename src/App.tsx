@@ -7,6 +7,11 @@ import { loader as singleProductLoader } from "./pages/SingleProduct";
 // Actions
 import { action as registerUserAction } from "./features/user/RegisterUser";
 import { action as loginAction } from "./features/user/LoginUser";
+// import { action as checkoutAction } from "./components/checkout/CheckoutOrderForm";
+
+import { action as checkoutAction } from "./pages/Checkout";
+
+import CheckoutLoginInfo from "./components/checkout/CheckoutLoginInfo";
 // App Function
 const router = createBrowserRouter([
 	{
@@ -44,7 +49,8 @@ const router = createBrowserRouter([
 			{
 				path: "checkout",
 				element: <Checkout />,
-				errorElement: <ErrorElement />
+				errorElement: <ErrorElement />,
+				action: checkoutAction
 			},
 			{
 				path: "orders",
@@ -64,6 +70,10 @@ const router = createBrowserRouter([
 		element: <Register />,
 		errorElement: <Error />,
 		action: registerUserAction
+	},
+	{
+		path: "/checkoutinfo",
+		element: <CheckoutLoginInfo />
 	}
 ]);
 export default function App() {
