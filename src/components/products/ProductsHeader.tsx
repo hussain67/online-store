@@ -10,7 +10,7 @@ type PropsType = {
 function ProductsHeader({ layout, setLayout }: PropsType) {
 	const result = useLoaderData() as ProductResponse;
 	const totalItems: number = result.meta.pagination.total;
-	console.log();
+	// console.log();
 	return (
 		<section className="flex justify-between border-solid border-b-2 pb-3 mb-4">
 			<h3>Total items: {totalItems}</h3>

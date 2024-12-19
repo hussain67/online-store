@@ -17,7 +17,7 @@ export const loader = async ({ request }): Promise<OrderResponse | Response | nu
 			}
 		});
 
-		console.log(response);
+		// console.log(response);
 		return { ...response.data };
 	} catch (error) {
 		console.log(error);

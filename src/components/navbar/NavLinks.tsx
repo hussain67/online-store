@@ -14,6 +14,9 @@ function NavLinks() {
 					<NavLink
 						to={link.href}
 						key={link.label}
+						className={({ isActive }) => {
+							return `capitalize w-full ${isActive ? "text-primary" : ""}`;
+						}}
 					>
 						{link.label}
 					</NavLink>
