@@ -11,7 +11,7 @@ export default function HomeLayout() {
 		<div className="align-element">
 			<Header />
 			<Navbar />
-			<div className="align-element py-20">{isLoading ? <Loading /> : <Outlet />}</div>
+			<div className=" py-8">{isLoading ? <Loading /> : <Outlet />}</div>
 		</div>
 	);
 }

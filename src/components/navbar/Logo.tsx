@@ -1,12 +1,18 @@
 import { Link } from "react-router-dom";
-import { ArmchairIcon } from "lucide-react";
+// import { ArmchairIcon } from "lucide-react";
+import logo from "../../assets/logo.png";
 function Logo() {
 	return (
 		<Link
 			to="/"
-			className="hidden lg:flex bg-primary text-white p-2 rounded-lg justify-center items-center"
+			className="hidden lg:flex bg-primary text-white p-1 rounded-md justify-center items-center"
 		>
-			<ArmchairIcon className="w-8 h-8 " />
+			{/* <ArmchairIcon  /> */}
+			<img
+				src={logo}
+				alt="logo"
+				className="w-10 h-10 "
+			/>
 		</Link>
 	);
 }

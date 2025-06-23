@@ -8,7 +8,7 @@ function ProductGrid() {
 
 	// console.log(products);
 	return (
-		<section className="grid sm:grid-cols-2 lg:grid-cols-3">
+		<section className="grid gap-4 grid-cols-[repeat(auto-fill,_minmax(290px,_1fr))] ">
 			{products.map(product => {
 				return (
 					<GridItem

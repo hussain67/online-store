@@ -6,7 +6,7 @@ function ProductsGrid() {
 	const { data: products } = useLoaderData() as ProductResponse;
 	// console.log(data);
 	return (
-		<section className="mt-5 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+		<section className="mt-5 grid sm:grid-cols-2 lg:grid-cols-3">
 			{products.map((product: Product) => (
 				<Link
 					to={`/products/${product.id}`}

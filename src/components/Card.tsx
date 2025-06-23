@@ -6,19 +6,17 @@ function Card({ product }: { product: Product }) {
 	const { image, title, price } = product.attributes;
 	const poundAmount = formatAsPound(price);
 	return (
-		<section>
-			<div className="p-6 pt-0">
-				<img
-					src={image}
-					alt={title}
-					className="h-64 w-full object-cover"
-				/>
-				<div className="text-center mt-4">
-					<h2 className="capitalize">{title}</h2>
-					<p>{poundAmount}</p>
-				</div>
+		<div className="p-6 pt-0 w-[80%] mx-[10%] sm:w-full sm:mx-0">
+			<img
+				src={image}
+				alt={title}
+				className="h-64 w-full object-cover"
+			/>
+			<div className="text-center mt-4">
+				<h2 className="capitalize">{title}</h2>
+				<p>{poundAmount}</p>
 			</div>
-		</section>
+		</div>
 	);
 }
 

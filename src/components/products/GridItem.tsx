@@ -10,20 +10,22 @@ function GridItem({ product }: { product: Product }) {
 	return (
 		<Link
 			to={`/products/${product.id}`}
-			className="p-6 m-3  border-solid border-2"
+			className="p-6  border-solid border-2  "
 		>
-			<img
-				src={image}
-				alt={title}
-				className="h-64 w-full object-cover sm:h-48"
-			/>
-			<div className="flex mt-2">
-				<div className=" sm:mt-0">
-					<h2 className="capitalize">{title}</h2>
-					<h4>{company}</h4>
+			<article className="w-[90%] mx-auto md:w-full">
+				<img
+					src={image}
+					alt={title}
+					className="h-64 w-full object-cover "
+				/>
+				<div className="flex mt-2">
+					<div className=" sm:mt-0">
+						<h2 className="capitalize">{title}</h2>
+						<h4>{company}</h4>
+					</div>
+					<p className="ml-auto">{poundAmount}</p>
 				</div>
-				<p className="ml-auto">{poundAmount}</p>
-			</div>
+			</article>
 		</Link>
 	);
 }

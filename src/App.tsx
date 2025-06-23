@@ -8,7 +8,6 @@ import { loader as orderLoader } from "./pages/Orders";
 // Actions
 import { action as registerUserAction } from "./features/user/RegisterUser";
 import { action as loginAction } from "./features/user/LoginUser";
-// import { action as checkoutAction } from "./components/checkout/CheckoutOrderForm";
 
 import { action as checkoutAction } from "./pages/Checkout";
 

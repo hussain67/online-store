@@ -33,11 +33,12 @@ function ProductInfo() {
 	}
 
 	return (
-		<section className="grid sm:grid-cols-2 gap-x-10 mt-4">
+		<section className="grid  gap-6 md:grid-cols-2 gap-x-10 mt-4">
 			<img
-				className="h-72 w-full rounded-md"
+				className="h-72  md:w-full mx-[10%] md:mx-0 lg:w-[80%] lg:mx-[10%] rounded-md"
 				src={image}
 			/>
+
 			<div>
 				<h1 className="capitalize text-3xl font-bold">{title}</h1>
 				<h3 className="text-xl mt-2">{company}</h3>
