@@ -1,4 +1,4 @@
-import { createSlice, payloadAction } from "@reduxjs/toolkit";
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { toast } from "../../hooks/use-toast";
 
 export type User = {
@@ -23,7 +23,7 @@ const userSlice = createSlice({
 	name: "user",
 	initialState,
 	reducers: {
-		loginUser: (state, action: payloadAction<User>) => {
+		loginUser: (state, action: PayloadAction<User>) => {
 			const user = action.payload;
 			state.user = user;
 			localStorage.setItem("user", JSON.stringify(user));

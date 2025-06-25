@@ -1,8 +1,8 @@
 import { ShoppingCart } from "lucide-react";
 import { Button } from "../ui/button";
-import { Link, redirect, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useAppSelector } from "../../hook";
-import CheckoutLoginInfo from "../checkout/CheckoutLoginInfo";
+// import CheckoutLoginInfo from "../checkout/CheckoutLoginInfo";
 
 export default function CartButton() {
 	const user = useAppSelector(state => state.userState.user);

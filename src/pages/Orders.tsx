@@ -6,7 +6,7 @@ import store from "../store";
 import { OrderResponse } from "../types/cartTypes";
 import { customFetch } from "../utils/customFetch";
 
-export const loader = async ({ request }): Promise<OrderResponse | Response | null> => {
+export const loader = async ({ request }: { request: Request }): Promise<OrderResponse | Response | null> => {
 	const user = store.getState().userState.user;
 	const params = Object.fromEntries([...new URL(request.url).searchParams.entries()]);
 	try {

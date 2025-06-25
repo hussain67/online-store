@@ -1,4 +1,4 @@
-import { createSlice, PayloadAction, payloadAction } from "@reduxjs/toolkit";
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { applyTheme } from "../../utils/applyTheme";
 
 export type Theme = "light" | "dark";

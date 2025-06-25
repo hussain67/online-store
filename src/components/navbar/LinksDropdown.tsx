@@ -4,7 +4,7 @@ import { Button } from "../ui/button";
 
 import { NavLink } from "react-router-dom";
 import { links } from "../../utils/Links";
-import { useAppDispatch, useAppSelector } from "../../hook";
+import { useAppSelector } from "../../hook";
 // import { Links } from "../utils/Links";
 
 function LinksDropdown() {
