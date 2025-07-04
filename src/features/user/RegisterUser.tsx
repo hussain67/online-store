@@ -11,11 +11,11 @@ import SubmitButton from "../../components/SubmitButton";
 export const action: ActionFunction = async ({ request }): Promise<Response | null> => {
 	const formData = await request.formData();
 	const data = Object.fromEntries(formData);
-	console.log(data);
+	// console.log(data);
 	try {
-		await new Promise(resolve => setTimeout(resolve, 2000));
+		// await new Promise(resolve => setTimeout(resolve, 2000));
 		const result = await customFetch.post("/auth/local/register", data);
-		console.log(result);
+		// console.log(result);
 		toast({ description: "Registered" });
 		return redirect("/login");
 	} catch (error) {

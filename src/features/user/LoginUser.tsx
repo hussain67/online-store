@@ -14,11 +14,10 @@ import store from "../../store";
 export const action: ActionFunction = async ({ request }): Promise<Response | null> => {
 	const formData = await request.formData();
 	const data = Object.fromEntries(formData);
-	console.log(data);
+	// console.log(data);
 	try {
-		// await new Promise(resolve => setTimeout(resolve, 2000));
 		const response: AxiosResponse = await customFetch.post("/auth/local", data);
-		console.log(response);
+
 		const userName = response.data.user.username;
 		const jwt = response.data.jwt;
 		store.dispatch(loginUser({ userName, jwt }));
@@ -36,11 +35,12 @@ export const action: ActionFunction = async ({ request }): Promise<Response | nu
 function LoginUser() {
 	const dispatch = useAppDispatch();
 	const navigate = useNavigate();
+	// GUEST USER
 	async function loginAsGuistUser(): Promise<void> {
 		try {
 			const response: AxiosResponse = await customFetch.post("/auth/local", {
-				identifier: "hussain123@test.com",
-				password: "123123"
+				identifier: "test@test.com",
+				password: "secret"
 			});
 			const userName = response.data.user.username;
 			const jwt = response.data.jwt;
