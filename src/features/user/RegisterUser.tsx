@@ -7,15 +7,14 @@ import { toast } from "../../hooks/use-toast";
 import { AxiosError } from "axios";
 import SubmitButton from "../../components/SubmitButton";
 
-// hussain123 hussain123@test.com 123123
 export const action: ActionFunction = async ({ request }): Promise<Response | null> => {
 	const formData = await request.formData();
 	const data = Object.fromEntries(formData);
-	// console.log(data);
+
 	try {
 		// await new Promise(resolve => setTimeout(resolve, 2000));
-		const result = await customFetch.post("/auth/local/register", data);
-		// console.log(result);
+		await customFetch.post("/auth/local/register", data);
+
 		toast({ description: "Registered" });
 		return redirect("/login");
 	} catch (error) {
